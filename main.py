@@ -5,6 +5,7 @@ from optparse import OptionParser
 
 DEBUG = False
 
+
 def scenario_A(file_in):
     print("Input file: {}".format(file_in))
 
@@ -31,7 +32,8 @@ def scenario_A(file_in):
         print("Trace:")
         print("\n".join([str(x) for x in trace]))
 
-if __name__=="__main__":
+
+if __name__ == "__main__":
     parser = OptionParser()
     parser.add_option("-i", "--input-file", dest="in_file", help="Input file name", metavar="FILE")
     parser.add_option("-o", "--output-file", dest="out_file", help="Output file name", metavar="FILE")
@@ -40,4 +42,4 @@ if __name__=="__main__":
     (options, args) = parser.parse_args()
 
     DEBUG = options.debug
-    scenario_A("small.in")
+    scenario_A("medium.in")
